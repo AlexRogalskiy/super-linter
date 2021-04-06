@@ -55,7 +55,7 @@ function InvokeLintly() {
   debug "DONE DISPLAYING ARGUMENTS"
 
   # Lintly will comment on the PR
-  echo "$LINTER_COMMAND_OUTPUT" | lintly --format="${LINTLY_FORMAT}"
+  echo "$LINTER_COMMAND_OUTPUT" | lintly --log --format="${LINTLY_FORMAT}"
 
   debug "$?"
   debug "^^ exit code ^^"
