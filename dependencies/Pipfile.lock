@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5ff9ee1b43b0ec1111544e685511427f13285c8b90352334ea7ff01411b208c8"
+            "sha256": "a60fc6e9df86faaa1065e47b188ba636adc00b83ac21fa26b9a34b516559baad"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -920,11 +920,11 @@
         },
         "ttam-lintly": {
             "hashes": [
-                "sha256:25d6b2879b8afdee4bcbcb77cdf1a4cc5ba68ab8f58d3bb220da0ba5dcd7e5f4",
-                "sha256:85f15f30413538a119de397d77c87f745881c26e09ec499fabaf1c97baf6cd75"
+                "sha256:49153a29be82656923d2c66a49e9adbf96e5fd06b748f47a6d96bb0cda760cc3",
+                "sha256:83ed81fb2baf0f7ff92318d71defc8c704c69907c746747cb12f30bfaae582d4"
             ],
             "index": "pypi",
-            "version": "==0.6.10"
+            "version": "==0.6.11"
         },
         "typed-ast": {
             "hashes": [
