@@ -21,6 +21,7 @@ FROM hadolint/hadolint:latest-alpine as dockerfile-lint
 FROM ghcr.io/assignuser/lintr-lib:0.2.0 as lintr-lib
 FROM ghcr.io/assignuser/chktex-alpine:0.1.1 as chktex
 FROM garethr/kubeval:0.15.0 as kubeval
+FROM tfsec/tfsec:v0.39 as tfsec
 
 ##################
 # Get base image #
@@ -246,6 +247,11 @@ RUN terrascan init
 # Install Terragrunt #
 ######################
 COPY --from=terragrunt /usr/local/bin/terragrunt /usr/bin/
+
+##################
+# Install Tfsec #
+##################
+COPY --from=tfsec /usr/bin/tfsec /usr/bin/
 
 ######################
 # Install protolint #

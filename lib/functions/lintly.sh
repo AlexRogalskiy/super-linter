@@ -17,6 +17,7 @@ LINTLY_SUPPORT_ARRAY['PYTHON_BLACK']="black"
 LINTLY_SUPPORT_ARRAY['PYTHON_PYLINT']="pylint-json"
 LINTLY_SUPPORT_ARRAY['JAVASCRIPT_ES']="eslint"
 LINTLY_SUPPORT_ARRAY['TYPESCRIPT_ES']="eslint"
+LINTLY_SUPPORT_ARRAY['TERRAFORM_TFSEC']="tfsec"
 LINTLY_SUPPORT_ARRAY['CSS']="stylelint"
 LINTLY_SUPPORT_ARRAY['DOCKERFILE_HADOLINT']="hadolint"
 LINTLY_SUPPORT_ARRAY['CLOUDFORMATION']="cfn-lint"
@@ -34,6 +35,7 @@ function AddLinterOptsForLintly() {
   [[ ! "${LINTER_OPTS[PYTHON_BANDIT]}" =~ "json" ]] && LINTER_OPTS[PYTHON_BANDIT]+=" --format=json --silent"
   [[ ! "${LINTER_OPTS[PYTHON_PYLINT]}" =~ "json" ]] && LINTER_OPTS[PYTHON_PYLINT]+=" --output-format=json"
   [[ ! "${LINTER_OPTS[DOCKERFILE_HADOLINT]}" =~ "json" ]] && LINTER_OPTS[DOCKERFILE_HADOLINT]+=" --format json"
+  [[ ! "${LINTER_OPTS[TERRAFORM_TFSEC]}" =~ "json" ]] && LINTER_OPTS[TERRAFORM_TFSEC]+=" -f json"
 }
 ################################################################################
 #### Function InvokeLintly #####################################################
