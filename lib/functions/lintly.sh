@@ -47,7 +47,8 @@ function InvokeLintly() {
   # Pull in the vars #
   ####################
   LINTLY_FORMAT="${1}"
-  LINTER_COMMAND_OUTPUT="${2}"
+  LINTLY_FILE_OVERRIDE="${2}"
+  LINTER_COMMAND_OUTPUT="${3}"
 
   debug "----<<<<INVOKING Invokelintly>>>>----"
   debug "FORMAT: ${LINTLY_FORMAT}"
@@ -55,8 +56,12 @@ function InvokeLintly() {
   debug ""
   debug "DONE DISPLAYING ARGUMENTS"
 
+  LINTLY_LOG=""
+  if [[ ${ACTIONS_RUNNER_DEBUG} == true ]]; then LINTLY_LOG="--log"; fi
+
   # Lintly will comment on the PR
-  echo "$LINTER_COMMAND_OUTPUT" | lintly --log --format="${LINTLY_FORMAT}"
+  export LINTLY_FILE_OVERRIDE="${LINTLY_FILE_OVERRIDE}"
+  echo "$LINTER_COMMAND_OUTPUT" | lintly "${LINTLY_LOG}" --format="${LINTLY_FORMAT}"
 
   debug "$?"
   debug "^^ exit code ^^"
