@@ -17,6 +17,7 @@ FROM wata727/tflint:0.25.0 as tflint
 FROM alpine/terragrunt:0.14.5 as terragrunt
 FROM mvdan/shfmt:v3.2.4 as shfmt
 FROM accurics/terrascan:2d1374b as terrascan
+FROM tfsec/tfsec:v0.39 as tfsec
 FROM hadolint/hadolint:latest-alpine as dockerfile-lint
 FROM ghcr.io/assignuser/lintr-lib:0.2.0 as lintr-lib
 FROM ghcr.io/assignuser/chktex-alpine:0.1.1 as chktex
@@ -241,6 +242,11 @@ COPY --from=tflint /usr/local/bin/tflint /usr/bin/
 ##################
 COPY --from=terrascan /go/bin/terrascan /usr/bin/
 RUN terrascan init
+
+##################
+# Install Tfsec #
+##################
+COPY --from=tfsec /usr/bin/tfsec /usr/bin/
 
 ######################
 # Install Terragrunt #
