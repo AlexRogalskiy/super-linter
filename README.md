@@ -85,7 +85,9 @@ Developers on **GitHub** can call the **GitHub Action** to lint their code base 
 | **SQL**                          | [sql-lint](https://github.com/joereynolds/sql-lint)                                                                                                                           |
 | **Tekton**                       | [tekton-lint](https://github.com/IBM/tekton-lint)                                                                                                                             |
 | **Terraform**                    | [tflint](https://github.com/terraform-linters/tflint) / [terrascan](https://github.com/accurics/terrascan)   
-| **Tfsec**                        | [tflint](https://github.com/terraform-linters/tflint) / [tfsec](https://github.com/tfsec/tfsec)                                                             |
+                                                |
+| **Tfsec**                        | [tfsec](https://github.com/tfsec/tfsec) 
+                                                |
 | **Terragrunt**                   | [terragrunt](https://github.com/gruntwork-io/terragrunt)                                                                                                                      |
 | **TypeScript**                   | [eslint](https://eslint.org/) / [standard js](https://standardjs.com/)                                                                                                        |
 | **XML**                          | [LibXML](http://xmlsoft.org/)                                                                                                                                                 |
@@ -246,8 +248,10 @@ But if you wish to select or exclude specific linters, we give you full control 
 | **SUPPRESS_POSSUM**                | `false`                         | If set to `true`, will hide the ASCII possum at top of log output. Default is `false`                                                                                                                                |
 | **SNAKEMAKE_SNAKEFMT_CONFIG_FILE** | `.snakefmt.toml`                | Filename for [Snakemake configuration](https://github.com/snakemake/snakefmt#configuration) (ex: `pyproject.toml`, `.snakefmt.toml`)                                                                                 |
 | **SQL_CONFIG_FILE**                | `.sql-config.json`              | Filename for [SQL-Lint configuration](https://sql-lint.readthedocs.io/en/latest/files/configuration.html) (ex: `sql-config.json` , `.config.json`)                                                                   |
-| **TYPESCRIPT_ES_CONFIG_FILE**      | `.eslintrc.yml`                 | Filename for [eslint configuration](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) (ex: `.eslintrc.yml`, `.eslintrc.json`)                                                                 |
-| **TERRAFORM_TFSEC_CONFIG_FILE**      | `.tfsec`                      | Filename for [tfsec configuration](https://tfsec.dev/docs/config_file/) (ex: `config,json`, `config.yml`)
+| **TYPESCRIPT_ES_CONFIG_FILE**      | `.eslintrc.yml`                 | Filename for [eslint configuration](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) (ex: `.eslintrc.yml`, `.eslintrc.json`)  
+|
+| **TERRAFORM_TFSEC_CONFIG_FILE**      | `.tfsec`                      | Relative path to filename for [tfsec configuration](https://tfsec.dev/docs/config_file/) (ex: `.tfsec/config.json`, `.tfsec/config.yml`)
+|
 | **VALIDATE_ALL_CODEBASE**          | `true`                          | Will parse the entire repository and find all files to validate across all types. **NOTE:** When set to `false`, only **new** or **edited** files will be parsed for validation.                                     |
 | **VALIDATE_ANSIBLE**               | `true`                          | Flag to enable or disable the linting process of the Ansible language.                                                                                                                                               |
 | **VALIDATE_ARM**                   | `true`                          | Flag to enable or disable the linting process of the ARM language.                                                                                                                                                   |
