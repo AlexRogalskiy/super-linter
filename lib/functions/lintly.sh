@@ -62,7 +62,7 @@ function InvokeLintly() {
   # what the repo-relative path should be.
   export LINTLY_FILE_OVERRIDE="${FILE}"
   # Lintly will comment on the PR
-  lintly "${LINTLY_LOG}" --format="${LINTLY_FORMAT}" <"${LINTER_COMMAND_OUTPUT_FILE}"
+  lintly "${LINTLY_LOG}" --use-checks --format="${LINTLY_FORMAT}" <"${LINTER_COMMAND_OUTPUT_FILE}"
 
   debug "$?"
   debug "^^ exit code ^^"
