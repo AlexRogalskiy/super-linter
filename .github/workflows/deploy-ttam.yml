@@ -17,6 +17,8 @@ on:
   push:
     branches:
       - 'master'
+  pull_request:
+    branches-ignore: []
 
 ###############
 # Set the Job #
@@ -75,4 +77,4 @@ jobs:
             BUILD_VERSION=${{ github.sha }}
           push: true
           tags: |
-            ghcr.io/23andme/super-linter:latest
+            ghcr.io/23andme/super-linter:slim-test
