@@ -13,12 +13,7 @@
 #######################################
 # Start the job on all push to master #
 #######################################
-on:
-  push:
-    branches:
-      - 'master'
-  pull_request:
-    branches-ignore: []
+on: push
 
 ###############
 # Set the Job #
