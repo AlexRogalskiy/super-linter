@@ -55,6 +55,12 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      ###################################################################
+      # Checkout the code base (required for docker path context below) #
+      ###################################################################
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       ###########################################
       # Build and Push containers to registries #
       ###########################################
