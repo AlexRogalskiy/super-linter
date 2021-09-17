@@ -232,7 +232,7 @@ LANGUAGE_ARRAY=('ANSIBLE' 'ARM' 'BASH' 'BASH_EXEC' 'CLANG_FORMAT'
   'STATES' 'SQL' 'SQLFLUFF' 'TEKTON' 'TERRAFORM'
   'TERRAFORM_TERRASCAN' 'TERRAGRUNT' 'TSX' 'TYPESCRIPT_ES' 'TYPESCRIPT_STANDARD'
   'XML' 'YAML')
-
+  
 ##############################
 # Linter command names array #
 ##############################
