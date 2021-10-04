@@ -1,0 +1,6 @@
+---
+RulesToSuppress:
+- id: W28
+  reason: (Resource found with an explicit name) Warning is noisy and low impact.
+- id: F19
+  reason: (EnableKeyRotation should not be false or absent) Unfortunately, many existing projects are not set up for key rotation right now.
